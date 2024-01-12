@@ -7,6 +7,7 @@
     <link rel="icon" href="Img/MiniLogo.jpg">
     <link rel="stylesheet" href="StyleFRMS.css">
     <link rel="stylesheet" href="Frms.js">
+    <link rel="stylesheet" href="upload.php">
 
 </head>
 <main class="site-main" id="main" tabindex="-1">
@@ -49,6 +50,80 @@
 <h2 class="heading-h4 heading-h2">Nuestra Vision</h2>
         <p>En el año 2025 seremos reconocidos como la mejor empresa contratista de carbones del Cerrejón, maximizando la calidad de nuestros servicios prestados e incrementando las oportunidades de cooperacion a nuestros empleados; soportados en una operacion sostenible, un modelo de gestion efectivo, tecnologia de punta y personal altamente calificado; orientados a alcannzar altos niveles de satisfaccion a nuestros clientes.</p>
   </a>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Publicador de Imágenes y Documentos</title>
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              text-align: center;
+          }
+  
+          #uploader {
+              margin: 20px;
+          }
+  
+          #gallery {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+          }
+  
+          .gallery-item {
+              margin: 10px;
+          }
+  
+          .gallery-item img {
+              max-width: 100%;
+              max-height: 150px;
+          }
+      </style>
+  </head>
+  <body>
+      <div id="uploader">
+          <input type="file" id="fileInput" accept="image/*, application/pdf" multiple>
+          <button onclick="uploadFiles()">Subir Archivos</button>
+      </div>
+  
+      <div id="gallery"></div>
+  
+      <script>
+          function uploadFiles() {
+              const fileInput = document.getElementById('fileInput');
+              const gallery = document.getElementById('gallery');
+  
+              for (const file of fileInput.files) {
+                  const galleryItem = document.createElement('div');
+                  galleryItem.className = 'gallery-item';
+  
+                  if (file.type.startsWith('image/')) {
+                      const img = document.createElement('img');
+                      img.src = URL.createObjectURL(file);
+                      galleryItem.appendChild(img);
+                  } else if (file.type === 'application/pdf') {
+                      const pdfIcon = document.createElement('span');
+                      pdfIcon.textContent = '📄 PDF';
+                      galleryItem.appendChild(pdfIcon);
+                  } else {
+                      const unknownIcon = document.createElement('span');
+                      unknownIcon.textContent = '📁 Desconocido';
+                      galleryItem.appendChild(unknownIcon);
+                  }
+                  
+  
+                  gallery.appendChild(galleryItem);
+              }
+  
+              // Aquí deberías enviar los archivos al servidor y almacenarlos en la base de datos.
+              // Esto es solo un ejemplo para la interfaz de usuario.
+          }
+      </script>
+  </body>
+  </html>
+
 </p>
 </div></div>
   </div>
@@ -69,7 +144,6 @@
 
           <div class="carousel-item-text" data-carousel="text" style="height: 217px;">
             <p>Con la ayuda de una subvención, rotarios de Durango, Colorado (EE.UU.) instalaron más de 200 luces de energía solar en hogares remotos de la Nación Navajo.&nbsp;</p>
-<p><a href="/es/rotarians-bring-light-navajo-checkerboard" tabindex="0">Más información</a></p>
 
           </div>
         </div>
@@ -87,7 +161,6 @@
 
           <div class="carousel-item-text" data-carousel="text" style="height: 217px;">
             <p>La rotaria y médica Pia Skarabis-Querfeld ha dedicado años a la construcción de una red de médicos voluntarios que ayudan a los refugiados en Berlín (Alemania).</p>
-<p><a href="/es/rotarian-helps-refugees-germany" tabindex="-1">Más información</a></p>
 
           </div>
         </div>
@@ -105,7 +178,6 @@
 
           <div class="carousel-item-text" data-carousel="text" style="height: 217px;">
             <p>Clubes rotarios aunaron sus esfuerzos para ayudar a Puerto Rico en la reconstrucción de sus hogares después de haber sufrido los estragos causados por el huracán María.&nbsp;</p>
-<p><a href="/es/rotary-members-rebuild-after-hurricane-maria" tabindex="-1">Más información</a></p>
 
           </div>
         </div>
@@ -184,8 +256,8 @@
 </div>
 
 <body>
-    
-    
+  
+
 </body>
          
 
