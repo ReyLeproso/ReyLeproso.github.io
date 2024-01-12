@@ -1,12 +1,10 @@
 .odometer.odometer-auto-theme,.odometer.odometer-auto-theme .odometer-digit,.odometer.odometer-theme-minimal,.odometer.odometer-theme-minimal .odometer-digit {
     display: inline-block;
-    *zoom:1;*display: inline;
     position: relative
 }
 
 .odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer,.odometer.odometer-theme-minimal .odometer-digit .odometer-digit-spacer {
     display: inline-block;
-    *zoom:1;*display: inline;
     visibility: hidden
 }
 
@@ -27,7 +25,6 @@
 
 .odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner,.odometer.odometer-theme-minimal .odometer-digit .odometer-ribbon-inner {
     display: block;
-    -webkit-backface-visibility: hidden;
 }
 
 .odometer.odometer-auto-theme .odometer-digit .odometer-value,.odometer.odometer-theme-minimal .odometer-digit .odometer-value {
@@ -11099,3 +11096,71 @@ body.page-search #search-form .google-appliance-keymatch-results .heading-h3 {
         padding-top: 15px
     }
 }
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    /* Ajustes de estilo para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+
+    /* Puedes agregar estilos específicos para dispositivos móviles aquí */
+
+    /* Ejemplo: */
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+/* Estilos específicos para PC */
+@media only screen and (min-width: 769px) {
+    /* Ajustes de estilo para pantallas más grandes (por ejemplo, PCs) */
+
+    /* Puedes agregar estilos específicos para PCs aquí */
+
+    /* Ejemplo: */
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+/* Agregar más estilos según sea necesario */
+
+/* Estilos para la barra de navegación, pie de página, etc. */
+
+/* Estilos para el formulario */
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Agregar más estilos según sea necesario */
+
